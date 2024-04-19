@@ -43,7 +43,7 @@ display(dt)
 # update operation
 
 dt.update(condition="ID == 101", 
-          set = {"Age":"Age=44"})
+          set = {"Age":"44"})
 
 
 # COMMAND ----------
@@ -56,7 +56,7 @@ for f in os.listdir("/dbfs/delta/mydata"):
 # update operation
 
 dt.update(condition="ID == 101", 
-          set = {"Name":"Name='Donald Trump'"})
+          set = {"Name":"'Donald Trump'"})
 
 
 # COMMAND ----------
