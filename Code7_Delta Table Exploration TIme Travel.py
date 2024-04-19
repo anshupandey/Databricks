@@ -7,11 +7,16 @@ display(df)
 # COMMAND ----------
 
 import os
+# Initialize a new directory
 os.makedirs("/dbfs/delta/mydata",exist_ok=True)
 
 # COMMAND ----------
 
 delta_dir = "/dbfs/delta/mydata"
+
+# COMMAND ----------
+
+df.write.format("delta").saveAsTable("People3")
 
 # COMMAND ----------
 
