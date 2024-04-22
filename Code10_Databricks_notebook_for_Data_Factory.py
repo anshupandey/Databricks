@@ -19,3 +19,12 @@ data = response.data.decode("utf-8")
 #save data
 path = "dbfs:/{0}/products.csv".format(folder)
 dbutils.fs.put(path,data,True)
+
+# COMMAND ----------
+
+df = spark.sql("select * from insurance;")
+df.count()
+
+# COMMAND ----------
+
+
